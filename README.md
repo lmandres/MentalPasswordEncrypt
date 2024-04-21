@@ -3,6 +3,10 @@ MentalPasswordEncrypt is a set of python scripts to generate keys, test the mapp
 
 [Mental Cryptography and Good Passwords](https://scilogs.spektrum.de/hlf/mental-cryptography-and-good-passwords/)
 
+NOTE: Rob Shearer has shown that Manuel Blum's Mental Hash is cryptographically weak as demonstrated by a naive attack with about 150 characters of ciphertext:
+
+[The "Blum Mental Hash" Is A Lousy Idea](https://github.com/cogentpeople/ebp-processing/pull/142/files?diff=unified&w=1)
+
 ## Prerequisites
 MentalPasswordEncrypt relies on the following prerequisites:
 
