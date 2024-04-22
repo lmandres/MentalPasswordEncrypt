@@ -83,3 +83,17 @@ or:
 ```bash
 python3 test_encrypt.py
 ```
+
+## Personal Notes
+The Blum Mental Hash should not be used as it stands.  Instead, it should serve as a starting point to use the method.  However, you should add different ways to salt the password hash with different methods, for example, coming up with a salt value to use after each round of changing the password.  This should come with proficiency in using the method, but the Blum Mental Hash should not be used before then.  Certain methods that I have come up with are:
+
+* adding and modding in hexadecimal instead of decimal
+* salting the hash with a unique salt value after each round of changing the password
+* salting the hash with the website value
+* repeating the salt for each round of computing the value
+
+These methods need to be used in the same order that was used when the password was set.  In addition, these intermediate calculations should not be output into the password.  In any case, there needs to exist several ways to mutate the password after each password change for each different site without compromising the hash keys in case of a password leak.
+
+Lastly, the complexity of the steps to calculate the hash or password should be based on the sensitivity of the information kept on the website.  For example, I don't plan to use Blum's Mental Hash method for my most sensitive accounts.  However, for casual accounts like newspaper media or situations where I have to create an account but don't have my password manager available, I may use Blum's method with modifications.
+
+Still, as of the date of this edit, I don't believe that I am proficient enough in the use of Blum's Mental Hash to use for casual or regular accounts. 
